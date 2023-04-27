@@ -22,6 +22,9 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    if (!project.hasProperty("android.buildCacheDir")) {
+        namespace "com.mr.flutter.plugin.filepicker"
+    }
     compileSdkVersion 33
 
     defaultConfig {
